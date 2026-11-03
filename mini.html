@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Builder</title>
+
+  <!-- CSS CONNECTION -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <h2>Resume<span>Craft</span></h2>
+    <button type="button" id="downloadBtn">Download PDF</button>
+  </header>
+
+  <main class="container">
+
+    <section class="form-panel">
+      <h1>Create Your Resume</h1>
+      <p>Enter your details below.</p>
+
+      <form id="resumeForm">
+        <label for="name">Full Name</label>
+        <input id="name" placeholder="Enter your full name">
+
+        <label for="job">Job Title</label>
+        <input id="job" placeholder="e.g. Software Developer">
+
+        <label for="email">Email Address</label>
+        <input id="email" type="email" placeholder="you@example.com">
+
+        <label for="phone">Phone Number</label>
+        <input id="phone" placeholder="+91 9876543210">
+
+        <label for="location">Location</label>
+        <input id="location" placeholder="Mumbai, India">
+
+        <label for="summary">Professional Summary</label>
+        <textarea id="summary" placeholder="Write a short introduction"></textarea>
+
+        <label for="education">Education</label>
+        <textarea id="education" placeholder="Degree, college, year"></textarea>
+
+        <label for="skills">Skills</label>
+        <textarea id="skills" placeholder="HTML, CSS, JavaScript, SQL"></textarea>
+
+        <label for="projects">Projects</label>
+        <textarea id="projects" placeholder="Describe your projects"></textarea>
+
+        <label for="experience">Experience / Internship</label>
+        <textarea id="experience" placeholder="Describe your experience"></textarea>
+
+        <label for="template">Select Template</label>
+        <select id="template">
+          <option value="classic">Template 1 - Classic</option>
+          <option value="modern">Template 2 - Modern</option>
+          <option value="minimal">Template 3 - Minimal</option>
+          <option value="student">Template 4 - Student</option>
+        </select>
+
+        <button type="button" id="generateBtn" class="primary">
+          Generate Resume
+        </button>
+
+        <button type="button" id="clearBtn" class="secondary">
+          Clear Form
+        </button>
+      </form>
+    </section>
+
+    <section class="preview-panel">
+      <h2>Live Preview</h2>
+
+      <article id="resume" class="resume classic">
+        <header class="resume-header">
+          <h1 id="outName">Your Name</h1>
+          <h3 id="outJob">Your Job Title</h3>
+          <p id="outContact">Email | Phone | Location</p>
+        </header>
+
+        <section class="resume-section">
+          <h2>PROFILE</h2>
+          <p id="outSummary">Your professional summary will appear here.</p>
+        </section>
+
+        <section class="resume-section">
+          <h2>EDUCATION</h2>
+          <p id="outEducation">Your education details</p>
+        </section>
+
+        <section class="resume-section">
+          <h2>SKILLS</h2>
+          <p id="outSkills">Your skills</p>
+        </section>
+
+        <section class="resume-section">
+          <h2>PROJECTS</h2>
+          <p id="outProjects">Your projects</p>
+        </section>
+
+        <section class="resume-section">
+          <h2>EXPERIENCE</h2>
+          <p id="outExperience">Your experience</p>
+        </section>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- JAVASCRIPT CONNECTION -->
+  <script src="script.js"></script>
+</body>
+</html>
